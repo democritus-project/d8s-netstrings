@@ -1,4 +1,4 @@
-from democritus_netstrings import (
+from d8s_netstrings import (
     string_to_netstring_ascii,
     string_to_netstring_hex,
     netstring_ascii_to_string,
