@@ -19,7 +19,7 @@ def string_to_netstring_hex(string: str, *args):
 
 def netstring_ascii_to_netstring_hex(netstring_ascii: str):
     """Convert a netstring (represented as ascii) to its hex representation."""
-    from democritus_strings import string_to_hex
+    from d8s_strings import string_to_hex
 
     nestring_hex = string_to_hex(netstring_ascii, seperator=' ')
     return nestring_hex
@@ -27,7 +27,7 @@ def netstring_ascii_to_netstring_hex(netstring_ascii: str):
 
 def netstring_hex_to_netstring_ascii(netstring_hex: str):
     """Convert a netstring (represented as hex) to its ascii representation."""
-    from democritus_strings import hex_to_string
+    from d8s_strings import hex_to_string
 
     nestring_ascii = hex_to_string(netstring_hex)
     return nestring_ascii
