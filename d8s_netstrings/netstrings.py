@@ -19,7 +19,7 @@ def string_to_netstring_hex(string: str, *args):
 
 def netstring_ascii_to_netstring_hex(netstring_ascii: str):
     """Convert a netstring (represented as ascii) to its hex representation."""
-    from d8s_strings import string_to_hex
+    from d8s_strings import string_to_hex  # pylint: disable=C0415
 
     nestring_hex = string_to_hex(netstring_ascii, seperator=' ')
     return nestring_hex
@@ -27,7 +27,7 @@ def netstring_ascii_to_netstring_hex(netstring_ascii: str):
 
 def netstring_hex_to_netstring_ascii(netstring_hex: str):
     """Convert a netstring (represented as hex) to its ascii representation."""
-    from d8s_strings import hex_to_string
+    from d8s_strings import hex_to_string  # pylint: disable=C0415
 
     nestring_ascii = hex_to_string(netstring_hex)
     return nestring_ascii
@@ -36,7 +36,7 @@ def netstring_hex_to_netstring_ascii(netstring_hex: str):
 def netstring_ascii_to_string(netstring_ascii: str):
     """Get the string portion of the given netstring (represented as ascii)."""
     # TODO: there should be a construct for splitting and getting the first item of the split
-    length = netstring_ascii.split(':')[0]
+    _ = netstring_ascii.split(':')[0]
     ascii_string = ':'.join(netstring_ascii.split(':')[1:])
     # this will remove the trailing comma
     ascii_string = ascii_string[:-1]
