@@ -14,9 +14,32 @@ Democritus functions<sup>[1]</sup> for working with Netstrings.
 
 We use `d8s` as an abbreviation for `democritus` (you can read more about this [here](https://github.com/democritus-project/roadmap#what-is-d8s)).
 
-## Usage
+## Functions
 
-Coming soon...
+  - ```python
+    def string_to_netstring_ascii(string: str, *args):
+        """Convert the given string to a netstring (and return it's ascii representation)."""
+    ```
+  - ```python
+    def string_to_netstring_hex(string: str, *args):
+        """Convert the given string to a netstring (and return it's hex representation)."""
+    ```
+  - ```python
+    def netstring_ascii_to_netstring_hex(netstring_ascii: str):
+        """Convert a netstring (represented as ascii) to its hex representation."""
+    ```
+  - ```python
+    def netstring_hex_to_netstring_ascii(netstring_hex: str):
+        """Convert a netstring (represented as hex) to its ascii representation."""
+    ```
+  - ```python
+    def netstring_ascii_to_string(netstring_ascii: str):
+        """Get the string portion of the given netstring (represented as ascii)."""
+    ```
+  - ```python
+    def netstring_hex_to_string(netstring_hex: str):
+        """Get the string portion of the given netstring (represented as hex)."""
+    ```
 
 ## Development
 
